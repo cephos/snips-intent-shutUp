@@ -22,7 +22,7 @@ def read_configuration_file(configuration_file):
 
 
 def intent_received(self, hermes, intent_message):
-    if intent_message.intent.intent_name == 'cephos:shutUp':
+    if intent_message.intent.intent_name == 'cephos:ShutUp':
 
         config = read_configuration_file("config.ini")
         if config.get("secret").get("pegasus_user") is None:
