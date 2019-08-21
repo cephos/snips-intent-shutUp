@@ -26,9 +26,9 @@ def intent_received(self, hermes, intent_message):
 
         config = read_configuration_file("config.ini")
         if config.get("secret").get("pegasus_user") is None:
-            print "No pegasus_user in config.ini, you must setup an user for this skill to work"
+            print("No pegasus_user in config.ini, you must setup an user for this skill to work")
         elif len(config.get("secret").get("pegasus_user")) == 0:
-            print "No pegasus_user in config.ini, you must setup an user for this skill to work"
+            print("No pegasus_user in config.ini, you must setup an user for this skill to work")
         skill_locale = config.get("secret", {"locale":"en_US"}).get("locale", u"en_US")
 
         #This sets up the https connection
